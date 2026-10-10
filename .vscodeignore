@@ -1,0 +1,12 @@
+.vscode/**
+.vscode-test/**
+src/**
+node_modules/**
+install/**
+out/**/*.map
+.gitignore
+tsconfig.json
+package-lock.json
+*.vsix
+*.rar
+*.zip

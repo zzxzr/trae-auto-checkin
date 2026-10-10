@@ -1,0 +1,66 @@
+{
+  "name": "trae-auto-checkin",
+  "displayName": "Trae Auto Checkin",
+  "description": "打开 Trae CN IDE 时自动签到，再也不用担心忘记",
+  "version": "1.0.4",
+  "publisher": "LiHui",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zzxzr/trae-auto-checkin"
+  },
+  "engines": {
+    "vscode": "^1.74.0"
+  },
+  "categories": ["Other"],
+  "keywords": ["trae", "checkin", "auto", "signin", "签到"],
+  "activationEvents": [
+    "onStartupFinished"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "traeAutoCheckin.checkin",
+        "title": "Trae Checkin: 立即签到"
+      },
+      {
+        "command": "traeAutoCheckin.status",
+        "title": "Trae Checkin: 查看签到状态与积分"
+      }
+    ],
+    "configuration": {
+      "title": "Trae Auto Checkin",
+      "properties": {
+        "traeAutoCheckin.autoCheckinOnStartup": {
+          "type": "boolean",
+          "default": true,
+          "description": "启动 IDE 时自动签到"
+        },
+        "traeAutoCheckin.startupDelay": {
+          "type": "number",
+          "default": 5,
+          "description": "启动后延迟秒数再执行签到（避免影响启动速度）"
+        },
+        "traeAutoCheckin.showOutputOnSuccess": {
+          "type": "boolean",
+          "default": false,
+          "description": "签到成功时也弹出输出面板（默认仅出错时显示）"
+        }
+      }
+    }
+  },
+  "scripts": {
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "package": "vsce package",
+    "publish:ovsx": "ovsx publish"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.74.0",
+    "@types/node": "^20.0.0",
+    "typescript": "^5.3.0",
+    "@vscode/vsce": "^3.0.0",
+    "ovsx": "^0.8.0"
+  }
+}

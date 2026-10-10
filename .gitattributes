@@ -1,0 +1,2 @@
+# Shell 脚本在 Windows 提交时保持 LF，避免在 Linux/macOS 执行报 bad interpreter
+*.sh text eol=lf
