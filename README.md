@@ -36,6 +36,8 @@
 
 将 `.vsix` 文件下载后，在 Trae CN IDE 命令面板中执行 `Extensions: Install from VSIX...`。
 
+> 给其他机器安装的完整步骤（下载链接 + 三条命令）见 [INSTALL.md](./INSTALL.md)。
+
 ### 在其他机器上安装（推荐）
 
 把 `lihui.trae-auto-checkin-<version>.vsix` 和 `install/` 目录一起拷贝，然后：
