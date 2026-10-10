@@ -2,8 +2,13 @@
   "name": "trae-auto-checkin",
   "displayName": "Trae Auto Checkin",
   "description": "打开 Trae CN IDE 时自动签到，再也不用担心忘记",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "publisher": "LiHui",
+  "icon": "images/icon.png",
+  "galleryBanner": {
+    "color": "#0F1E3D",
+    "theme": "dark"
+  },
   "license": "MIT",
   "repository": {
     "type": "git",
